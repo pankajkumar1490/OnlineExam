@@ -8,9 +8,9 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state('home', {
+        $stateProvider.state('login-main', {
             parent: 'app',
-            url: '/',
+            url: '/login-page',
             data: {
                 authorities: []
             },

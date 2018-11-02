@@ -1,4 +1,16 @@
-<nav class="navbar navbar-default" role="navigation">
+<style>
+.nav-background{    
+    background: rgba(0, 0, 0, 0.5);      
+    }
+
+
+.nav-text-color{    
+    color: white;      
+    }
+</style>
+
+
+<nav class="navbar navbar-default nav-background nav-text-color" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-click="vm.toggleNavbar()">
@@ -8,16 +20,17 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
-                <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/>
-                <span>OnlineProject</span> <span class="navbar-version">v{{VERSION}}</span>
+               <!--  <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/> -->
+                <span></span> 
             </a>
         </div>
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
+        
             <ul class="nav navbar-nav navbar-right">
                 <li ui-sref-active="active">
                     <a ui-sref="home" ng-click="vm.collapseNavbar()">
                         <span class="glyphicon glyphicon-home"></span>
-                        <span class="hidden-sm">Home</span>
+                        <span class="hidden-sm" style="color: white; font: bold 100% 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px;">Home</span>
                     </a>
                 </li>
                 <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
@@ -39,7 +52,7 @@
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="account-menu">
                         <span>
                             <span class="glyphicon glyphicon-user"></span>
-                            <span class="hidden-sm">
+                            <span class="hidden-sm" style="color: white; font: bold 100% 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px;">
                                 Account
                             </span>
                             <b class="caret"></b>
@@ -76,12 +89,12 @@
                                 <span>Sign in</span>
                             </a>
                         </li>
-                        <li ui-sref-active="active" ng-switch-when="false">
+                       <!--  <li ui-sref-active="active" ng-switch-when="false">
                             <a ui-sref="register" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
                                 <span>Register</span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li ng-class="{active: vm.$state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer">
